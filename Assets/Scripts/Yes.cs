@@ -14,11 +14,25 @@ public class Yes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("yes");
+        }
     }
 
     public void ResetScene()
     {
         canvas.GetComponent<GenerateOptions>().GenerateTheThingiemcJigs();
+    }
+
+    public void ButtonDoSomethingWrong()
+    {
+        Debug.Log("You clicked the wrong button!");
+    }
+
+    public void ButtonDoSomethingRight()
+    {
+        Debug.Log("You clicked the right button!");
+        ResetScene();
     }
 }

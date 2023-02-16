@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Button : MonoBehaviour
 {
-    public bool isRight;
+    [HideInInspector]public bool isRight = false;
 
     public void SetText(string text)
     {
