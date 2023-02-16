@@ -8,7 +8,6 @@ public class Yes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ResetScene();
     }
 
     // Update is called once per frame
@@ -34,5 +33,24 @@ public class Yes : MonoBehaviour
     {
         Debug.Log("You clicked the right button!");
         ResetScene();
+    }
+
+    public void Quit()
+    {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
+    }
+
+    public void BackToMenu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void StartGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

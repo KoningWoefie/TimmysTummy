@@ -11,9 +11,11 @@ public class GenerateOptions : MonoBehaviour
     [SerializeField] private GameObject option2;
     [SerializeField] private GameObject option3;
 
+    //positions for the buttons
     [SerializeField]GameObject[] positions = new GameObject[3];
 
-    Dictionary<string, Sprite> countries = new Dictionary<string, Sprite>();
+    //list of sprites
+    [SerializeField]List<Sprite> countrySprites = new List<Sprite>();
     
     //image for the country
     [SerializeField] private GameObject countryImage;
@@ -24,54 +26,7 @@ public class GenerateOptions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //add all european countries to the array
-        countries.Add("Albania", Resources.Load<Sprite>("Albania"));
-        countries.Add("Andorra", Resources.Load<Sprite>("Andorra"));
-        countries.Add("Austria", Resources.Load<Sprite>("Austria"));
-        countries.Add("Azerbaijan", Resources.Load<Sprite>("Azerbaijan"));
-        countries.Add("Belarus", Resources.Load<Sprite>("Belarus"));
-        countries.Add("Belgium", Resources.Load<Sprite>("Belgium"));
-        countries.Add("Bosnia and Herzegovina", Resources.Load<Sprite>("Bosnia and Herzegovina"));
-        countries.Add("Bulgaria", Resources.Load<Sprite>("Bulgaria"));
-        countries.Add("Croatia", Resources.Load<Sprite>("Croatia"));
-        countries.Add("Czech Republic", Resources.Load<Sprite>("Czech Republic"));
-        countries.Add("Denmark", Resources.Load<Sprite>("Denmark"));
-        countries.Add("Estonia", Resources.Load<Sprite>("Estonia"));
-        countries.Add("Finland", Resources.Load<Sprite>("Finland"));
-        countries.Add("France", Resources.Load<Sprite>("France"));
-        countries.Add("Georgia", Resources.Load<Sprite>("Georgia"));
-        countries.Add("Germany", Resources.Load<Sprite>("Germany"));
-        countries.Add("Greece", Resources.Load<Sprite>("Greece"));
-        countries.Add("Hungary", Resources.Load<Sprite>("Hungary"));
-        countries.Add("Iceland", Resources.Load<Sprite>("Iceland"));
-        countries.Add("Ireland", Resources.Load<Sprite>("Ireland"));
-        countries.Add("Italy", Resources.Load<Sprite>("Italy"));
-        countries.Add("Kosovo", Resources.Load<Sprite>("Kosovo"));
-        countries.Add("Latvia", Resources.Load<Sprite>("Latvia"));
-        countries.Add("Liechtenstein", Resources.Load<Sprite>("Liechtenstein"));
-        countries.Add("Lithuania", Resources.Load<Sprite>("Lithuania"));
-        countries.Add("Luxembourg", Resources.Load<Sprite>("Luxembourg"));
-        countries.Add("Macedonia", Resources.Load<Sprite>("Macedonia"));
-        countries.Add("Malta", Resources.Load<Sprite>("Malta"));
-        countries.Add("Moldova", Resources.Load<Sprite>("Moldova"));
-        countries.Add("Monaco", Resources.Load<Sprite>("Monaco"));
-        countries.Add("Montenegro", Resources.Load<Sprite>("Montenegro"));
-        countries.Add("Netherlands", Resources.Load<Sprite>("Netherlands"));
-        countries.Add("Norway", Resources.Load<Sprite>("Norway"));
-        countries.Add("Poland", Resources.Load<Sprite>("Poland"));
-        countries.Add("Portugal", Resources.Load<Sprite>("Portugal"));
-        countries.Add("Romania", Resources.Load<Sprite>("Romania"));
-        countries.Add("San Marino", Resources.Load<Sprite>("San Marino"));
-        countries.Add("Serbia", Resources.Load<Sprite>("Serbia"));
-        countries.Add("Slovakia", Resources.Load<Sprite>("Slovakia"));
-        countries.Add("Slovenia", Resources.Load<Sprite>("Slovenia"));
-        countries.Add("Spain", Resources.Load<Sprite>("Spain"));
-        countries.Add("Sweden", Resources.Load<Sprite>("Sweden"));
-        countries.Add("Switzerland", Resources.Load<Sprite>("Switzerland"));
-        countries.Add("United Kingdom", Resources.Load<Sprite>("United Kingdom"));
-        countries.Add("Vatican City", Resources.Load<Sprite>("Vatican City"));
-        countries.Add("Turkey", Resources.Load<Sprite>("Turkey"));
-        
+        //add all the sprites to the dictionary
         options[0] = "Albania";
         options[1] = "Andorra";
         options[2] = "Austria";
@@ -132,7 +87,7 @@ public class GenerateOptions : MonoBehaviour
 
         //set the country image
         int countryIndex = (int)(Random.Range(0, 46));
-        countryImage.GetComponent<Image>().sprite = countries[(options[countryIndex])];
+        countryImage.GetComponent<Image>().sprite = countrySprites[countryIndex];
 
         //set the options
         int rand = 0;
