@@ -22,8 +22,21 @@ public class GenerateOptions : MonoBehaviour
     //image for the country
     [SerializeField] private GameObject countryImage;
 
-    public void GenerateTheThingiemcJigs()
+    public void GenerateTheThingiemcJigs(bool EU, bool NL)
     {
+        int maxValue = 0;
+        string[] options = new string[0];
+
+        if(EU)
+        {
+            maxValue = singleton.EUoptions.Length;
+            options = singleton.EUoptions;
+        }
+        else if(NL)
+        {
+            maxValue = singleton.NLPoptions.Length;
+            options = singleton.NLPoptions;
+        }
         //set the positions of the options
         int pos = 0;
         pos = (int)Random.Range(0, 3);
@@ -32,26 +45,26 @@ public class GenerateOptions : MonoBehaviour
         option3.transform.position = positions[(pos + 2) % 3].transform.position;
 
         //set the country image
-        int countryIndex = (int)(Random.Range(0, 46));
+        int countryIndex = (int)(Random.Range(0, maxValue));
         // countryImage.GetComponent<Image>().sprite = countrySprites[countryIndex];
 
         //set the options
         int rand = 0;
         int lastRand = 0;
-        rand = (int)(Random.Range(0, 46));
+        rand = (int)(Random.Range(0, maxValue));
         lastRand = rand;
-        option1.GetComponent<Button>().SetText(singleton.EUoptions[countryIndex]);
+        option1.GetComponent<Button>().SetText(options[countryIndex]);
         option1.GetComponent<Button>().isRight = true;
         while (rand == lastRand || countryIndex == rand)
         {
-            rand = (int)(Random.Range(0, 46));
+            rand = (int)(Random.Range(0, maxValue));
         }
-        option2.GetComponent<Button>().SetText(singleton.EUoptions[rand]);
+        option2.GetComponent<Button>().SetText(options[rand]);
         lastRand = rand;
         while (rand == lastRand || countryIndex == rand)
         {
-            rand = (int)(Random.Range(0, 46));
+            rand = (int)(Random.Range(0, maxValue));
         }
-        option3.GetComponent<Button>().SetText(singleton.EUoptions[rand]);
+        option3.GetComponent<Button>().SetText(options[rand]);
     }
 }

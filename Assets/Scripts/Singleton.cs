@@ -6,9 +6,11 @@ public class Singleton
 {
     private static Singleton instance;
     
-    [HideInInspector]public string[] EUoptions = new string[47];
-    [HideInInspector]public string[] NLPoptions = new string[24];
-    [HideInInspector]public string[] NLCoptions = new string[12];
+    [HideInInspector]public string[] EUoptions = new string[46];
+    [HideInInspector]public string[] NLPoptions = new string[12];
+
+    public bool EU;
+    public bool NL;
 
     public int score;
 
@@ -28,7 +30,9 @@ public class Singleton
     {
         //initialize fields
         score = 0;
-        
+        EU = false;
+        NL = false;
+
         //add all the European countres to the array
         EUoptions[0]  = "Albania";
         EUoptions[1]  = "Andorra";
@@ -90,19 +94,5 @@ public class Singleton
         NLPoptions[9]  = "Utrecht";
         NLPoptions[10] = "Zeeland";
         NLPoptions[11] = "Zuid-Holland";
-
-        //add all the Dutch province capitals to the array
-        NLCoptions[0] = "Arnhem";
-        NLCoptions[1] = "Assen";
-        NLCoptions[2] = "Den Haag";
-        NLCoptions[3] = "Groningen";
-        NLCoptions[4] = "Haarlem";
-        NLCoptions[5] = "Leeuwarden";
-        NLCoptions[6] = "Lelystad";
-        NLCoptions[7] = "Maastricht";
-        NLCoptions[8] = "Middelburg";
-        NLCoptions[9] = "'s-Hertogenbosch";
-        NLCoptions[10] = "Utrecht";
-        NLCoptions[11] = "Zwolle";
     }
 }

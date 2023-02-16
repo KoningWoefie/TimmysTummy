@@ -11,7 +11,7 @@ public class Yes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canvas.GetComponent<GenerateOptions>().GenerateTheThingiemcJigs();
+        canvas.GetComponent<GenerateOptions>().GenerateTheThingiemcJigs(singleton.EU, singleton.NL);
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class Yes : MonoBehaviour
 
     public void ResetScene()
     {
-        canvas.GetComponent<GenerateOptions>().GenerateTheThingiemcJigs();
+        canvas.GetComponent<GenerateOptions>().GenerateTheThingiemcJigs(singleton.EU, singleton.NL);
     }
 
     public void ButtonDoSomethingWrong()
@@ -58,11 +58,25 @@ public class Yes : MonoBehaviour
 
     public void GameOver()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(3);
     }
 
     public void StartGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+    }
+
+    public void SetEU()
+    {
+        singleton.EU = true;
+        singleton.NL = false;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+    }
+
+    public void SetNL()
+    {
+        singleton.EU = false;
+        singleton.NL = true;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
     }
 }
