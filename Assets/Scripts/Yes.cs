@@ -5,9 +5,13 @@ using UnityEngine;
 public class Yes : MonoBehaviour
 {
     [SerializeField] private GameObject canvas;
+
+    private Singleton singleton = Singleton.Instance;
+
     // Start is called before the first frame update
     void Start()
     {
+        canvas.GetComponent<GenerateOptions>().GenerateTheThingiemcJigs();
     }
 
     // Update is called once per frame
@@ -27,11 +31,13 @@ public class Yes : MonoBehaviour
     public void ButtonDoSomethingWrong()
     {
         Debug.Log("You clicked the wrong button!");
+        GameOver();
     }
 
     public void ButtonDoSomethingRight()
     {
         Debug.Log("You clicked the right button!");
+        singleton.score++;
         ResetScene();
     }
 
@@ -46,11 +52,17 @@ public class Yes : MonoBehaviour
 
     public void BackToMenu()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex - 1);
+        singleton.score = 0;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
+
+    public void GameOver()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
     }
 
     public void StartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 }
