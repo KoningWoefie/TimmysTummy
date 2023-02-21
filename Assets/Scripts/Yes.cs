@@ -11,7 +11,11 @@ public class Yes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canvas.GetComponent<GenerateOptions>().GenerateTheThingiemcJigs(singleton.EU, singleton.NL);
+        try
+        {
+            canvas.GetComponent<GenerateOptions>().GenerateTheThingiemcJigs(singleton.EU, singleton.NL);
+        }
+        catch{}
     }
 
     // Update is called once per frame
