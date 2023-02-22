@@ -8,6 +8,8 @@ public class Yes : MonoBehaviour
 
     private Singleton singleton = Singleton.Instance;
 
+    public AudioSource selected;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,12 @@ public class Yes : MonoBehaviour
         catch{}
     }
 
+
+    public void MakeSound()
+    {
+      selected.Play();  
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -26,6 +34,7 @@ public class Yes : MonoBehaviour
             Debug.Log("yes");
         }
     }
+
 
     public void ResetScene()
     {
