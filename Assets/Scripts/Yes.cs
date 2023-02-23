@@ -35,7 +35,6 @@ public class Yes : MonoBehaviour
         }
     }
 
-
     public void ResetScene()
     {
         canvas.GetComponent<GenerateOptions>().GenerateTheThingiemcJigs(singleton.EU, singleton.NL);
