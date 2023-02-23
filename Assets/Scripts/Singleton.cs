@@ -43,7 +43,7 @@ public class Singleton
         EUoptions[6]  = "Bulgarije";
         EUoptions[7]  = "Kroatië";
         EUoptions[8]  = "Tsjechië";
-        EUoptions[9] = "Denemarken";
+        EUoptions[9]  = "Denemarken";
         EUoptions[10] = "Estland";
         EUoptions[11] = "Finland";
         EUoptions[12] = "Frankrijk";
