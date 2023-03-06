@@ -52,7 +52,15 @@ public class GenerateOptions : MonoBehaviour
 
         //set the country image
         int countryIndex = (int)(Random.Range(0, maxValue));
-        // countryImage.GetComponent<Image>().sprite = countrySprites[countryIndex];
+
+        if (EU)
+        {
+            countryImage.GetComponent<Image>().sprite = EUcountrySprites[countryIndex];
+        }
+        else if (NL)
+        {
+            countryImage.GetComponent<Image>().sprite = NLcountrySprites[countryIndex];
+        }
 
         //set the options
         int rand = 0;
