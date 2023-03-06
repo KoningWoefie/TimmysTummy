@@ -400,7 +400,50 @@ MonoBehaviour:
   - {fileID: 129555265}
   - {fileID: 1585776698}
   - {fileID: 148957157}
-  countrySprites: []
+  countrySprites:
+  - {fileID: 21300000, guid: 14d91052bf0d2014f9fd07e07c32021f, type: 3}
+  - {fileID: 21300000, guid: e76c97c219b081346ab79ad6cac5cc3c, type: 3}
+  - {fileID: 21300000, guid: 4d8630425f897e84c8cb815289acb5fb, type: 3}
+  - {fileID: 21300000, guid: 42a9f85866660fc44a3131562f67cd0f, type: 3}
+  - {fileID: 21300000, guid: 5535ab249c53b234f902f988b1611df3, type: 3}
+  - {fileID: 21300000, guid: a27ba3133c3a3c241b18a5327851eac0, type: 3}
+  - {fileID: 21300000, guid: b655ba13ebe6d454b89000aaba106c6a, type: 3}
+  - {fileID: 21300000, guid: 91ff0c4fb2a8e714aa0eb5b08777be26, type: 3}
+  - {fileID: 21300000, guid: 9bee10f414d147c4cad2b3660e70cc64, type: 3}
+  - {fileID: 21300000, guid: faaed03e22d5f3745a09e74e399cba5a, type: 3}
+  - {fileID: 21300000, guid: 0f970b192e5688148af405f2602503ae, type: 3}
+  - {fileID: 21300000, guid: 06e3742ed7642dc46bc905afee37fbb0, type: 3}
+  - {fileID: 21300000, guid: ad59e58c17e554349b3750f5420f4a09, type: 3}
+  - {fileID: 21300000, guid: b2316748b7e1e914d8097212b425cac8, type: 3}
+  - {fileID: 21300000, guid: 0a5b58b8482443441930a726f52c0aa4, type: 3}
+  - {fileID: 21300000, guid: 921c14ab60eea894087b4c4d9319ce22, type: 3}
+  - {fileID: 21300000, guid: 0e14df60ddba70b4984d29a4be3c571b, type: 3}
+  - {fileID: 21300000, guid: f267513e593c25b43899983fd68e1562, type: 3}
+  - {fileID: 21300000, guid: e83504046dd38a346a191f6c6b5b0f90, type: 3}
+  - {fileID: 21300000, guid: 6af8349ddaa7ac54e9dcc42c340e3c61, type: 3}
+  - {fileID: 21300000, guid: 4cf857d78fefa264cbc35b16dec2e9db, type: 3}
+  - {fileID: 21300000, guid: 2c2110dc8b2127b42b4f3b7aed26a91a, type: 3}
+  - {fileID: 21300000, guid: 7341fa45284589a4ebe2d2d4ac8e1580, type: 3}
+  - {fileID: 21300000, guid: 2262d3f5c88de2a4ebf8e931b231882d, type: 3}
+  - {fileID: 21300000, guid: e1c7f8b4e5313dc4fa1631be9d1d44ab, type: 3}
+  - {fileID: 21300000, guid: 26a05ed64e2ca6140b4edb16b5fdc4f3, type: 3}
+  - {fileID: 21300000, guid: 87ac90519d2608343be3174df4834726, type: 3}
+  - {fileID: 21300000, guid: 454b8ee7e612cb149a7d310dea544837, type: 3}
+  - {fileID: 21300000, guid: b2bf20671c991d74b8113723220ad7be, type: 3}
+  - {fileID: 21300000, guid: 40a2788a700196840a4992a488ed6bf2, type: 3}
+  - {fileID: 21300000, guid: d8075de07298dc34a9d384eae07867d6, type: 3}
+  - {fileID: 21300000, guid: 686170078090064499473ffc1bb5914c, type: 3}
+  - {fileID: 21300000, guid: 772e9c634100daa408a253a6da7c4c4e, type: 3}
+  - {fileID: 21300000, guid: 1578bbf6a053fb24e9fc28dd5186b335, type: 3}
+  - {fileID: 21300000, guid: cf5bacca5bd6baa42ba1df91221ef8ef, type: 3}
+  - {fileID: 21300000, guid: 891b9adb8fd3a0448990a6e72114b20b, type: 3}
+  - {fileID: 21300000, guid: 476bdb489441c1d47b7901f86dc5d12a, type: 3}
+  - {fileID: 21300000, guid: 2c57fcf50b1b0fd4ea78e73dec9b2510, type: 3}
+  - {fileID: 21300000, guid: 35f74188a36279646b03d1389f7297f1, type: 3}
+  - {fileID: 21300000, guid: 6f1458481a41bdd479fc789092fb63e3, type: 3}
+  - {fileID: 21300000, guid: 85feedccae43d194e9340e4f475c6ee3, type: 3}
+  - {fileID: 21300000, guid: af0be00f0cbecdd47baff616676b85a6, type: 3}
+  - {fileID: 21300000, guid: c2550895d3d59c841a0a785de139a751, type: 3}
   countryImage: {fileID: 1337650446}
 --- !u!1 &312111286
 GameObject:
@@ -961,6 +1004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 274354707}
+  selected: {fileID: 0}
 --- !u!4 &1146240859
 Transform:
   m_ObjectHideFlags: 0
