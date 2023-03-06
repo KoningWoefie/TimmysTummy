@@ -22,6 +22,12 @@ public class GenerateOptions : MonoBehaviour
     //image for the country
     [SerializeField] private GameObject countryImage;
 
+    //List NL options sprites
+    [SerializeField]List<Sprite> NLcountrySprites = new List<Sprite>();
+
+    //List EU options sprites
+    [SerializeField]List<Sprite> EUcountrySprites = new List<Sprite>();
+
     public void GenerateTheThingiemcJigs(bool EU, bool NL)
     {
         int maxValue = 0;

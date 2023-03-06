@@ -400,7 +400,22 @@ MonoBehaviour:
   - {fileID: 129555265}
   - {fileID: 1585776698}
   - {fileID: 148957157}
-  countrySprites:
+  countrySprites: []
+  countryImage: {fileID: 1337650446}
+  NLcountrySprites:
+  - {fileID: 21300000, guid: 5c119474b6c0d78439a6fe2faa817e35, type: 3}
+  - {fileID: 21300000, guid: 8aca6fe0638224845b19d53f7990904d, type: 3}
+  - {fileID: 21300000, guid: 18081a28c759f934f8ff1116073ef78a, type: 3}
+  - {fileID: 21300000, guid: fde4fe658da6e854082060619de3d6e7, type: 3}
+  - {fileID: 21300000, guid: 95df446ecd3a9c94daa8865857cc02f5, type: 3}
+  - {fileID: 21300000, guid: 104ba9ac2f30c8341828a09432a88891, type: 3}
+  - {fileID: 21300000, guid: 605a17ff8f721f042a464dcac9ac78ac, type: 3}
+  - {fileID: 21300000, guid: 05a730cd446bd514b8a2fe467ef347f6, type: 3}
+  - {fileID: 21300000, guid: 85f254989251a654c9ce730432953de3, type: 3}
+  - {fileID: 21300000, guid: 9edac1e014c988b4799c3e10715fc129, type: 3}
+  - {fileID: 21300000, guid: 902372a1dd494c14e941d9643bb548a7, type: 3}
+  - {fileID: 21300000, guid: e0a4bfc023a6eee42a5a4552163adfcf, type: 3}
+  EUcountrySprites:
   - {fileID: 21300000, guid: 14d91052bf0d2014f9fd07e07c32021f, type: 3}
   - {fileID: 21300000, guid: e76c97c219b081346ab79ad6cac5cc3c, type: 3}
   - {fileID: 21300000, guid: 4d8630425f897e84c8cb815289acb5fb, type: 3}
@@ -444,7 +459,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 85feedccae43d194e9340e4f475c6ee3, type: 3}
   - {fileID: 21300000, guid: af0be00f0cbecdd47baff616676b85a6, type: 3}
   - {fileID: 21300000, guid: c2550895d3d59c841a0a785de139a751, type: 3}
-  countryImage: {fileID: 1337650446}
 --- !u!1 &312111286
 GameObject:
   m_ObjectHideFlags: 0
