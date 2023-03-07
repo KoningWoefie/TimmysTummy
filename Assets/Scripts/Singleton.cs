@@ -12,6 +12,8 @@ public class Singleton
     public bool EU;
     public bool NL;
 
+    public bool muted;
+
     public int score;
 
     public static Singleton Instance
@@ -32,6 +34,7 @@ public class Singleton
         score = 0;
         EU = false;
         NL = false;
+        muted = false;
 
         //add all the European countres to the array
         EUoptions[0]  = "Albanië";

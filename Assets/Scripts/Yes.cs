@@ -1,10 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Yes : MonoBehaviour
 {
-    [SerializeField] private GameObject canvas;
+    [SerializeField]private GameObject canvas;
+
+    private GameObject muteButton;
+
+    [SerializeField]private Sprite muted;
+    [SerializeField]private Sprite unmuted;
 
     private Singleton singleton = Singleton.Instance;
 
@@ -13,6 +19,15 @@ public class Yes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        muteButton = GameObject.Find("Mute");
+        if(singleton.muted)
+        {
+            muteButton.GetComponent<Image>().sprite = muted;
+        }
+        else
+        {
+            muteButton.GetComponent<Image>().sprite = unmuted;
+        }
         try
         {
             canvas.GetComponent<GenerateOptions>().GenerateTheThingiemcJigs(singleton.EU, singleton.NL);
@@ -66,6 +81,22 @@ public class Yes : MonoBehaviour
     {
         singleton.score = 0;
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
+
+    public void toggleSound()
+    {
+        if(singleton.muted)
+        {
+            singleton.muted = false;
+            muteButton.GetComponent<Image>().sprite = unmuted;
+            AudioListener.pause = false;
+        }
+        else
+        {
+            singleton.muted = true;
+            muteButton.GetComponent<Image>().sprite = muted;
+            AudioListener.pause = true;
+        }
     }
 
     public void GameOver()
